@@ -2,7 +2,7 @@ version: '3.8'
 services:
   mongodb:
     image: mongo:latest
-    container_name: mongodb
+    container_name: mongodb-semaforo
     ports:
       - "27018:27017"
     volumes:
@@ -10,7 +10,8 @@ services:
 
   app:
     build: .
-    container_name: semaforo_mongodb-app
+    image: welderessutti/semaforo-mongodb:latest
+    container_name: semaforo-mongodb-app
     ports:
       - "8080:8080"
     depends_on:
