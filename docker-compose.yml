@@ -15,5 +15,5 @@ services:
       - "8080:8080"
     depends_on:
       - mongodb
-    environment:
-      SPRING_DATA_MONGODB_URI: mongodb://mongodb:27017/semaforo
+#    environment:
+#      SPRING_DATA_MONGODB_URI: mongodb://mongodb:27017/semaforo
